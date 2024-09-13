@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-(u5nnlh5&dlouz&=9_+&!6sm8r6yq=ecii#rdk+kdjbi+vg1&&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["8000-lionelwise77-djangoblog-y57ktcm120c.ws.codeinstitute-ide.net",
 ".herokuapp.com"
@@ -85,13 +85,13 @@ WSGI_APPLICATION = 'codestar.wsgi.application'
 #        'ENGINE': 'django.db.backends.sqlite3',
 #        'NAME': BASE_DIR / 'db.sqlite3',
 #    }
-#}
+# }
 
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get("DATABASE_URL")),
+    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 
-SECRET_KEY = os.environ.get("SECRET_KEY")
+
 
 
 # Password validation
